@@ -1,7 +1,7 @@
 import React from "react";
 const InfoCard = props => {
     return (
-        <div className ="info-card" key={props.id}>
+        <div className ="info-card" key={props.url}>
             <h2>Title: {props.title}</h2>
             <p>{props.explanation}</p>
         </div>
