@@ -3,13 +3,24 @@ import PicInfo from "../src/components/PicInfo";
 import ApodInfo from "./components/ApodInfo";
 import axios from "axios";
 import styled from "styled-components";
+import { Container, Header, Divider } from 'semantic-ui-react'
 import "./App.css";
 
+const SupDiv = styled.div`
+display: flex;
+justify-content: center;
+align-content: center;
+`;
 const AppDiv = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-content: center;
+width: 50%;
+height: 100%;
+justify-self: center;
+border: 1px solid black;
+background-color: #2AC7E0;
 `;
 
 function App() {
@@ -22,11 +33,12 @@ function App() {
   }, [])
 
   return (
-    <AppDiv>
-      <PicInfo data={data}/>
-      <ApodInfo data={data} />
-      
-    </AppDiv>
+    <SupDiv>
+      <AppDiv>
+        <PicInfo data={data}/>
+        <ApodInfo data={data} />      
+      </AppDiv>
+    </SupDiv>
   );
 }
 

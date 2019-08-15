@@ -4,35 +4,27 @@ import styled from "styled-components";
 
 const PicCard = props => {
     return (
-        <StyledPicCard>
-        
-        <Card>
-        <Image class='ui small image'
-        width = '100%'
-        height = '100%'
-        src = {props.imgUrl}
-        />
-        <Card.Header>NASA Atronomical Photo of the Day</Card.Header> 
-        <Card.Meta>{props.date}</Card.Meta>
-        </Card>
-        
-        {/* // <div className ="photo-card" key={props.url}>
-        //     <img className="astro-image" alt="view of the day" src={props.imgUrl} />
-        //     <h2>NASA Astronomy Photo of the Day: {props.date}</h2>
-        // </div> */}
+        <StyledPicCard>    
+            <Card>
+                <Image class='ui small image'
+                width = '100%'
+                height = '100%'
+                src = {props.imgUrl}
+                />
+                <Card.Header>NASA Atronomical Photo of the Day</Card.Header> 
+                <Card.Meta>{props.date}</Card.Meta>
+            </Card>
         </StyledPicCard>
     )
 }
 
 const StyledPicCard = styled.div`
-width: 50%;
-height: 600px;
+width: 100%;
+height: 100%;
 margin: 10px;
-padding: 50px;
-background: green;
+background: #55CB53;
 align-self: center;
 justify-content: center;
-
-
+border: 1px solid black;
 `;
 export default (PicCard);
