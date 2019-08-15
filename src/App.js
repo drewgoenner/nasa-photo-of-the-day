@@ -2,7 +2,15 @@ import React, {useState, useEffect} from "react";
 import PicInfo from "../src/components/PicInfo";
 import ApodInfo from "./components/ApodInfo";
 import axios from "axios";
+import styled from "styled-components";
 import "./App.css";
+
+const AppDiv = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
+`;
 
 function App() {
 
@@ -14,11 +22,11 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <AppDiv>
       <PicInfo data={data}/>
       <ApodInfo data={data} />
       
-    </div>
+    </AppDiv>
   );
 }
 
